@@ -8,18 +8,17 @@
 
 <body>
 
-<div></div>
-<h1>fucking hell this actually works</h1>
-<p>i will be a great programmer once i figure this weird shit out</p>
-
-<p>life would be so much better if we would stop to make us bigger than we actually are </p>
-
-</div>
-
 <div>
-
-    <a href="http://www.hecklerspray.com/wp-content/gallery/emma-watson-nude/emma-watson-nude-fake-01.jpg">emma</a>
+    <h1><a href="/">Django Girls Blog</a></h1>
 </div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 </body>
 
 </html>
